@@ -30,6 +30,7 @@ Chrome ✔ | Firefox ✔ | Opera ✔ | Safari ✔ |  EDGE ✔ |
     - [Dépannage](#Dépannage)
     - [Note de patch](#Note-de-patch)
     - [Mise à jour](#Mise-à-jour) 
+  - [Personnalisation](#Personnalisation) 
   - [Aperçu](#Aperçu)
   - [Contribution et Développement](#Contribution-et-Développement)
 
