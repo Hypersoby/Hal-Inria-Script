@@ -109,7 +109,7 @@ Des `mises à jour` pourront être disponibles dans le futur en faisant `remonte
 
 2. Sur le panneau de droite qui contient les scripts, rendez-vous sur la ligne du script puis cliquez sur l'icône `⟲` pour vérifier si une mise à jour est possible. 
 
-![Update](https://i.imgur.com/CEODpLJ.png)
+![Update](https://i.imgur.com/RQi90O6.jpg)
 
 # Aperçu 
 
