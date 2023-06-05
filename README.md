@@ -27,11 +27,11 @@ Chrome ✔ | Firefox ✔ | Opera ✔ | Safari ✔ |  EDGE ✔ |
 # Sommaire
   - [Comment faire](#Comment-faire-?)
   - [Contenu](#Contenu) 
-    - [Dépannage](#Dépannage)
-    - [Note de patch](#Note-de-patch)
-    - [Mise à jour](#Mise-à-jour) 
   - [Personnalisation](#Personnalisation) 
   - [Aperçu](#Aperçu)
+  - [Dépannage](#Dépannage)
+  - [Note de patch](#Note-de-patch)
+  - [Mise à jour](#Mise-à-jour) 
   - [Contribution et Développement](#Contribution-et-Développement)
 
 
