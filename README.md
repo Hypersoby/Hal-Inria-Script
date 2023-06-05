@@ -9,7 +9,7 @@
    <br>
    Attention /!\ Le script ne sont pas compatibles avec les sites de collection, vous devrez alors les désactiver lors de la navigation.
    <br>
-  <a href="https://github.com/Hypersoby/Hal-Inrae-Scripts/wiki/Notes-de-patch">Patch Note</a>
+  <a href="https://github.com/Hypersoby/Hal-Inria-Scripts/wiki/Notes-de-patch">Patch Note</a>
   ·
   <a href="mailto:christopher.lallemant@inrie.fr?subject=Mail from our Website">Contactez moi</a>
   
