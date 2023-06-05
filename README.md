@@ -5,9 +5,9 @@
 <p align="center">
   Elégant, sobre et plus ergonomique : une nouvelle façons de navigation sur HAL Inria. 
    <br>
-   Seulement disponible pour le portail HAL Inria. 
+   Seulement disponible pour le portail <a href="https://inria.hal.science/">HAL Inria</a> 
    <br>
-   Attention /!\ Les scripts ne sont pas compatibles avec les sites de collection, vous devrez alors les désactiver lors de la navigation.
+   Attention /!\ Le script ne sont pas compatibles avec les sites de collection, vous devrez alors les désactiver lors de la navigation.
    <br>
   <a href="https://github.com/Hypersoby/Hal-Inrae-Scripts/wiki/Notes-de-patch">Patch Note</a>
   ·
