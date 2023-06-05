@@ -1,0 +1,1661 @@
+/* ==UserStyle==
+@name        Umbrhal
+@namespace   HyperSoby
+@homepageURL 	https://github.com/Hypersoby/Hal-Inria-Script
+@updateURL   	https://github.com/Hypersoby/Hal-Inria-Script/raw/master/Umbrhal.user.css 
+@version     1.0
+@author      Lallemant Christopher
+@advanced color bg-color "Fond" #2d3237
+@advanced color bg-widget "widgets" #4d5155
+@advanced color bg-ban "Bannière" #1e282f
+@advanced color cl-text "Texte Blanc" #D7DADC
+@advanced color cl-noir "Texte Noir" #000
+@advanced color cl-spec "Texte Jaune" #FFC744
+@advanced color trg-color "Bouton et Effet" #ffc691
+
+==/UserStyle== */
+
+@-moz-document url-prefix("https://inria.hal.science/"), url-prefix("https://cas.ccsd.cnrs.fr/cas/login") {
+   
+:root {
+
+    
+/* ================== SWAPPER ================== */  
+    --bg-color: /*[[bg-color]]*/;
+    --bg-ban:/*[[bg-ban]]*/;
+    --bg-widget: /*[[bg-widget]]*/;
+    --bg-widget-opa: rgba(/*[[bg-widget-rgb]]*/, .80);
+    --blanc:  /*[[cl-text]]*/;
+    --noir:  /*[[cl-noir]]*/;
+    --jaune: /*[[cl-spec]]*/;
+    --trg-color: /*[[trg-color]]*/;
+    --trg-hover: rgba(/*[[trg-color-rgb]]*/, .60);
+    
+    
+/* ================== TRANSITION ================== */      
+    --transition: .3s cubic-bezier(.25,.8,.5,1);
+}   
+}
+@-moz-document url-prefix("https://inria.hal.science/") {
+   
+
+/* ======================================================================================================= */     
+/* ============================================= ZONE CCSD =============================================== */        
+/* ======================================================================================================= */  
+    
+    
+/* BACKGROND DU BANDEAU BLEU =====================================*/    
+
+nav.navbar.header{
+	background-color: var(--bg-ban) !important;
+}    
+     
+/* BACKGROND DE LA ZONE BARRE DE RECHERCHE & Hover =====================================*/ 
+.sub-header {
+	background-color: var(--bg-ban) !important;
+	box-shadow:unset;
+}  
+/* LINK FONT COLOR CCSD =====================================*/       
+.color-major-color, .color-major-color a {
+	color: var(--blanc) !important;
+}
+
+/* ICON PROFIL  =====================================*/  
+.user-circle {
+	background-color: transparent;
+	border: 2px solid var(--trg-color);
+    transition:var(--transition);
+}    
+.user-circle:hover {
+	background-color: var(--trg-color);
+}
+/* MENU PROFIL Color / BG / HOVER / FLECHE / LOG-OUT  =====================================*/     
+.header .connected-menu .list-group-item {
+	color: var(--blanc) !important;
+}   
+.header .connected-menu .list-group-item:hover {
+	background-color: var(--trg-hover);
+}    
+.header .connected-menu .list-group-item:first-child::after {
+	border-bottom: 15px solid var(--bg-color);
+}    
+#log-out:hover {
+	background-color: #9e4040;
+}    
+.header .connected-menu .list-group-item#log-out {
+	color: var(--blanc) !important;
+}    
+ 
+/* BARRE DE RECHERCHE  =====================================*/      
+.hal-main-search-input {
+	background-image: linear-gradient(0deg,var(--trg-color) 50%,#0000 0);
+	color: var(--blanc);
+	background-color: var(--bg-widget);
+} 
+/* ICONE LOUPE BARRE DE RECHERCHE  =====================================*/  
+.hal-main-search-button {
+	color: var(--trg-color);
+}  
+/* ZONE RECHERCHE AVANCEE =====================================*/      
+#searchHeaderList #advSearchHeader, #searchHeaderList #solrSearchHeader {
+	background-color: var(--bg-widget-opa);
+    backdrop-filter: blur(3px);
+}
+    
+/* IMPUT DANS ZONE RECHERCHE AVANCEE =====================================*/       
+.input-group:not(.has-validation) > .form-control:not(:last-child), .input-group:not(.has-validation) > .custom-select:not(:last-child), .input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label, .input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label::after {
+	background-color: var(--bg-ban)!important;
+	color: var(--blanc);
+	border: 1px solid var(--trg-color) !important;
+} 
+/* BTN IMPUT DANS ZONE RECHERCHE AVANCEE =====================================*/     
+.input-group .form-btn-lang {
+	background: var(--trg-color) !important;
+	border: 1px solid var(--trg-color) !important;
+	color: var(--blanc);
+} 
+    
+/* MENU DU BTN IMPUT DANS ZONE RECHERCHE AVANCEE =====================================*/         
+.dropdown-menu {
+    color: var(--blanc);
+	background-color: var(--bg-color);
+	background-clip: padding-box;
+	border: 1px solid var(--trg-color);
+}  
+ul.dropdown-menu a {
+	color: var(--blanc);
+} 
+.dropdown-divider {
+	border-top: 1px solid var(--bg-widget);
+} 
+/* Btn du Menu ADMINISTRER DANS HAL =====================================*/   
+.nav.navbar-nav.ml-auto li .btn-admin[aria-expanded="true"] {
+	color: var(--blanc);
+	background-color: var(--bg-widget);
+}    
+.nav.navbar-nav.ml-auto li .btn-admin.btn-active, .nav.navbar-nav.ml-auto li .btn-admin:hover {
+	color: var(--blanc);
+	background-color: var(--trg-hover);
+}    
+/* Background / Texte du Menu ADMINISTRER DANS HAL et Fleche  =====================================*/         
+.header .administration-menu .roles {
+	background-color: var(--bg-widget);
+	color: var(--blanc);
+}    
+.list-group-item {
+	background-color: transparent;
+} 
+.header .administration-menu .list-group-item-arrowed:first-child::after {
+	border-right: 10px solid var(--trg-color);
+}    
+    
+    
+/* BG Tag Menu ADMINISTRER DANS HAL =====================================*/       
+.header .administration-menu .roles span {
+	background-color: var(--trg-color);
+    color:var(--noir);
+
+}
+/* BG du Menu ADMINISTRER DANS HAL en Hover/ Active/ Focus =====================================*/      
+.header .administration-menu .list-group-item:hover {
+	background-color: var(--trg-hover);
+}
+.list-group-item-action:active, .list-group-item-action:hover, .list-group-item-action:focus {
+	background-color: var(--trg-hover);
+}    
+/* Color du texte Menu ADMINISTRER DANS HAL =====================================*/     
+.header .administration-menu .list-group-item {
+	color: var(--blanc) !important;
+}
+  
+    
+/* Menu Language Color du texte et Fleche =====================================*/    
+ .header .menu-lang .list-group-item, .menu-connect .list-group-item, .menu-orcid-ext .list-group-item {
+	color: var(--blanc) !important;
+}
+.header .menu-lang .list-group-item:first-child::after, .menu-connect .list-group-item:first-child::after, .menu-orcid-ext .list-group-item:first-child::after {
+	border-bottom: 16px solid var(--trg-color);
+    top: -23px;
+}    
+    
+    
+    
+/* BG Menu Language Hover =====================================*/ 
+.header .menu-lang .list-group-item:hover, .menu-connect .list-group-item:hover, .menu-orcid-ext .list-group-item:hover {
+	background-color: var(--trg-hover);
+}         
+/* ===================================== BODY / HTML / COMMUN A TOUS ===================================== */    
+ 
+ 
+    
+/* BACKGROND DE HTML/BODY ET FONT COLOR  =====================================*/      
+html, body{
+	background-color: var(--bg-color);
+    color:var(--blanc);
+}
+    
+    
+/* LINK FONT COLOR  =====================================*/   
+a {
+	color: var(--trg-color);
+}    
+a:hover {
+	color: var(--trg-hover);
+}    
+/* H3 FONT COLOR  =====================================*/       
+.h3, h3 {
+    color:var(--blanc);
+} 
+h4 {
+	color:var(--blanc);
+}    
+    
+/* ZONE RECHRCHE AVNCEE FONT =====================================*/  
+    
+div.form-group.row label   {
+    color:var(--blanc);
+}   
+.tools-color {
+	color: var(--trg-color);
+}  
+    
+ 
+/* BACKGROND DES BTNS & Hover et color  =========================*/     
+.btn-primary-orange {
+	background: var(--trg-color);
+	border: 1px solid var(--trg-color);
+    color: var(--noir);
+}        
+.btn-primary-orange:hover {
+	background: var(--trg-hover);
+	border: 1px solid var(--trg-hover);
+    color: var(--blanc);
+} 
+.btn-hal.hal-submit-button, .btn-primary-orange.hal-submit-button {
+	color: var(--noir);
+}
+.btn-hal.hal-submit-button:hover, .btn-primary-orange.hal-submit-button:hover {
+	color: var(--blanc);
+}      
+/* BACKGROND DES BTNS & Hover ZONE DE RECHERCHE  =========================*/      
+   
+div.form-group.row span.input-group-btn {
+	background-color: var(--trg-color);
+}
+div.form-group.row span.input-group-btn:hover {
+	background-color: var(--trg-hover);
+}
+.hal-visualize-button {
+	background-color: var(--trg-color);
+    color:var(--noir);
+}    
+.hal-visualize-button:hover {
+	background-color: var(--trg-hover);
+    color:var(--blanc)!important;
+}   
+    
+/* BACKGROND DU FOOTER ================================*/      
+footer {
+	background-color: var(--bg-ban) !important;
+    border-top: 1px solid var(--trg-color);
+}    
+
+/* BTN GENERALE ================================*/         
+.btn.btn-primary, .form-actions .btn.btn-default, .input-group .btn.btn-default, .input-group span.input-group-btn button.form-btn-add {
+	background: var(--trg-color);
+}
+.input-group span.input-group-btn button {
+	color: var(--noir) !important;
+}    
+.btn.btn-primary:hover, .form-actions .btn.btn-default:hover, .input-group span.input-group-btn button.form-btn-add:hover {
+	background: var(--trg-hover);
+    color: var(--blanc)!important;
+}
+.btn.btn-sm.btn-default.dropdown-toggle.form-btn-lang:hover {
+	color: var(--blanc);
+}    
+/* BANDEAU WARNING/ SUCCESS  ================================*/       
+.alert-warning {
+	color: var(--blanc);
+	background-color: #6f4c2c;
+	border-color: #c8864b;
+}
+.alert-success {
+	color: var(--blanc);
+	background-color: #214b1e;
+	border-color: #4bc88d;
+}
+.btn.btn-primary, .form-actions .btn.btn-default, .input-group .btn.btn-default, .input-group span.input-group-btn button.form-btn-add {
+	color: var(--noir);
+}    
+/* ======================================================================================================= */     
+/* ========================================== PAGE PRINCIPAL ============================================= */        
+/* ======================================================================================================= */  
+
+/* Filtre sur les images bonne pratique  =====================================*/  
+.block-widget-contenu > p:nth-child(1) > img:nth-child(1) {
+	filter: invert(100%) grayscale(100%);
+}       
+    
+/* BANNIERE ===================================== */   
+
+/* COULEUR DU BG DU LOGO ===================================== */     
+.logo { 
+	background-color: var(--bg-ban);
+} 
+    
+/* COULEUR DU TEXTE DU LOGO ===================================== */      
+.text-ban{
+    color:var(--blanc);
+}   
+    
+
+@media (min-width: 1281px) and (max-width: 1920px){
+.logo {
+	background-image: url('https://i.imgur.com/MW7RN7T.png');
+}
+}
+@media (min-width: 1921px) and (max-width: 2560px){
+.logo {
+	background-image: url('https://i.imgur.com/1te2FsP.png');
+}
+}
+@media (max-width: 1280px){
+.logo {
+	background-image: url('https://i.imgur.com/oAbq9vL.png');
+}
+}
+/* BG MENU PRINCIPAL ===================================== */    
+.website-navigation {
+	background: var(--bg-ban);
+	box-shadow: unset;
+    border-bottom: 1px solid var(--trg-color);
+}    
+ 
+/* COLOR MENU PRINCIPAL ===================================== */        
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link  {
+	background: var(--trg-color);
+    color: var(--noir);
+}  
+    
+    
+ /* COLOR MENU PRINCIPAL HOVER ===================================== */     
+.website-navigation .nav-pills .nav-link:hover, .website-navigation .nav-pills .show > .nav-link {
+	background: var(--trg-hover);   
+}  
+/* BG COLOR DANS LE MENU PRINCIPAL ===================================== */   
+.website-navigation .nav-pills .dropdown-menu {
+	background: var(--bg-ban);
+	border: 1px solid var(--trg-color);
+	border-top: 0px;
+}
+
+/* BG ET COLOR DANS LE MENU PRINCIPAL HOVER ===================================== */     
+ul.dropdown-menu li:not(.not-white):hover, .dropdown-item:focus, .dropdown-item:hover {
+	background-color: var(--trg-hover) !important;
+}    
+
+/* ===================================== WIDGET GENERALE ===================================== */    
+    
+/* LABEL DES WIDGETS =====================================*/   
+.label.label-contrast {
+	background-color: var(--trg-color);
+}   
+    
+/* TITRE DES WIDGETS =====================================*/   
+.section-corps .widget .widget-header {
+	color:var(--blanc);
+}    
+    
+/* WIDGET, WIDGET ACCUEIL,WIDGET ACTU =====================================*/    
+.section-corps .widget, .block-widget, .card {
+	border: 1px solid var(--bg-widget);
+	background-color: var(--bg-widget);
+}
+ 
+/* BANDEAU WIDGET ACCUEIL =====================================*/     
+.block-titre {
+	background-color: var(--trg-color);
+    color: var(--noir);
+}    
+.widget-feeds .feed.item span[class^="icon-"] {
+	color: var(--trg-color);
+}    
+ 
+/* BLOCK DANS WIDGET ACTU =====================================*/
+.card-body {
+	border: 1px solid var(--bg-widget);
+	background-color: var(--bg-widget);
+    filter: brightness(80%) saturate(150%);
+}
+
+
+    
+ /* WIDGET ACTU LINK FONT COLOR  =====================================*/    
+.widget-feeds .link span, .widget-feeds .link .btn-link span[class^="icon-"] {
+	color: var(--trg-color);
+}    
+    
+     
+    
+/* WIDGET DERNIER DEPOTS =====================================*/    
+.list-deposit .media:hover {
+	background-color: var(--bg-widget);
+    border-color: var(--trg-color);
+	filter: brightness(150%);
+}
+.list-deposit .media .media-body a, .list-deposit .media .media-body a:hover {
+	color:var(--blanc);
+}
+.media img {
+	filter: brightness(65%);
+}
+/* WIDGET SHERPA =====================================*/        
+#sherpa-input-search {
+	border: 1px solid #21a66f !important;
+}
+    
+/* ============================================================================================================================================== */     
+/* ========================================== PAGE RECHERCHE / RECAP / VISUALISATION / VERIFICATION ============================================= */        
+/* ============================================================================================================================================== */     
+
+/*===================================== COMMUN à TOUTES LES PAGE =====================================*/
+   
+/* COLOR DES AFFILAITONS =====================================*/         
+.valid-struct, .structure-name.valid, .referential.valid, .ui-autocomplete.ui-front .ui-menu-item .valid, .ui-autocomplete.ui-front .ui-menu-item .preferred, #struct-info .valid, #struct-info .preferred, .deposit-status.status-11 {
+	color: #8FC78F;
+}     
+.old-struct, .structure-name.old, .referential.old, .ui-autocomplete.ui-front .ui-menu-item .old, #struct-info .old {
+	color: #FFC846;
+}    
+.incoming-struct, .structure-name.incoming, .referential.incoming, .ui-autocomplete.ui-front .ui-menu-item .incoming, #struct-info .incoming {
+	color: #F9AEAE;
+}    
+/* BG BLOCK DE LA PAGE RESULTATS =====================================*/      
+.section-shadow {
+	background-color: var(--bg-widget);
+}     
+
+    
+/* IMPUT BOXES  =====================================*/         
+form input.form-control {
+	background-color: var(--bg-ban);
+	color: var(--blanc);
+	border: 1px solid var(--trg-color) !important;
+}    
+.form-control:focus {
+	background-color: var(--bg-ban);
+	color: var(--blanc);
+}
+    
+/* LABEL DEFAULT  =====================================*/  
+.label.label-default {
+	background: var(--bg-ban);
+	color: var(--trg-color);
+	border: 1px solid var(--trg-color);
+}
+    
+.form-control {
+    background-color: var(--bg-ban);
+	color: var(--blanc);
+	border: 1px solid var(--trg-color);
+} 
+
+/* Proceeding Paper */        
+    
+.label.label-warning {
+	background: #2B18128C;
+	color: #FFA75A;
+	border: 1px solid #FFA75A;
+}
+    
+/* Arxiv + Article / COMM */    
+.label.label-danger, .label.label-arxiv {
+	background: #1e080896;
+	color: #FF8886;
+	border: 1px solid #FF8886;
+}
+    
+/* Label Chiffre */    
+.label.label-primary {
+	background: #0F2335;
+	color: #69BAFF;
+	border: 1px solid #69BAFF;
+}
+    
+/* Retour de Modif */    
+.label.label-info {
+	background: #121115;
+	color: #CAC4F2;
+	border: 1px solid #CAC4F2;
+}    
+/* PAGINATION  =====================================*/   
+    
+.pagination li {
+	padding: 3px 7px;
+	transition: var(--transition);
+}    
+ul.pagination li:hover {
+	background: var(--trg-hover);
+}
+ul.pagination li .page {
+	color: var(--blanc);
+} 
+    
+/* Color Texte Pageination  =====================================*/      
+.pagination li a {
+	color: var(--blanc);
+}
+/* Ligne sous le Texte Pageination  =====================================*/         
+.pagination li.active {
+	border-bottom: 1px solid var(--trg-color);
+}
+
+/*Block recap bas de page  =====================================*/       
+.step-recap .recap-citation {
+	background: var(--bg-ban);
+	padding: 20px;
+	font-weight: bold;
+}    
+.step-recap .recap-cgu {
+	border: 1px solid var(--trg-color);
+	background-color: var(--bg-ban);
+} 
+/* Altmetric  =====================================*/     
+div[id^="_altmetric_popover_el"].altmetric-embed div.altmetric_container div.altmetric-popover-inner .altmetric-popover-content {
+	background: transparent;
+}    
+div[id^="_altmetric_popover_el"].altmetric-embed div.altmetric_container a.link-to-altmetric-details-tab {
+	color: var(--trg-color);
+}
+  
+#metrics {
+	border: 1px solid var(--trg-color);
+}    
+    
+/* Liste Metadonnée =====================================*/   
+    
+/* Label Liste complete des Metadonnées  =====================================*/     
+#metadatas_Modal .grey-badge {
+	background-color: var(--bg-ban);
+	border: 1px solid var(--trg-color);
+}    
+/* Titre Liste complete des Metadonnées  =====================================*/  
+#metadatas_Modal .title-table {
+	color: var(--trg-color);
+} 
+    
+/* Sherpa =====================================*/   
+    
+/* Btn Sherpa Hover  ===================*/       
+.btn-sherpa:hover {
+	background-color: #28463a;
+}    
+
+/* Btn Accordeon Droite =====================================*/     
+#accordion-actions ul:hover li a, #accordion-actions ul:focus li a {
+	color: var(--noir);
+}    
+/*===================================== PAGE RECHERCHE  =====================================*/    
+    
+/* BG CHECKBOX  =====================================*/      
+[type="checkbox"]:not(:checked) + label::before, [type="checkbox"]:checked + label::before {
+	background: transparent;
+}    
+    
+/* BG BLOCK DE LA PAGE RESULTATS  =====================================*/         
+.table-white tr:hover, #partage_table tbody tr:hover, #mydeposit tbody #ownsub tr:hover, .table-white tr:focus, #partage_table tbody tr:focus, #mydeposit tbody #ownsub tr:focus {
+	background-color: var(--trg-hover);
+}
+/* Barre de Séparation BLOCK DE LA PAGE RESULTATS  =====================================*/    
+.table-white tr, #partage_table tbody tr, #mydeposit tbody #ownsub tr {
+	border-bottom: 1px solid var(--bg-ban);
+}
+/* BG TAG DocType =====================================*/        
+.typdoc, .doc-identifier, .doc-arxiv, .browse-filter, .doc-orcid {
+	background-color: var(--trg-hover);
+}    
+/* Color du Texte Version et number dans les block Resultat  =====================================*/         
+.results-table td a {
+	color: var(--blanc);
+}  
+/* Color du Texte  Nom de l'auteur  =====================================*/          
+ .results-table .authors-results a, .table-white .authors-results {
+	color: var(--jaune);
+}   
+  
+/* Color Texte triés par  =====================================*/        
+span.subtext {
+	color: var(--blanc);
+}
+/* Color du btn Texte triés par  =====================================*/         
+.dropdown-sort button {
+	color: var(--trg-color);
+}  
+/* BG du Menu Texte triés par  =====================================*/     
+.dropdown-tools li:not(.nb-doc-checked):hover, .dropdown-tools li:not(.nb-doc-checked):focus, .dropdown-tools li.active {
+	background-color: var(--trg-hover);
+}    
+    
+/* Color Citation  =====================================*/      
+.results-table .citation-results, .results-table .citation-results a {
+	color: var(--blanc);
+}    
+
+/* Color Bookmark et hover =====================================*/    
+#bookmark-button, #bookmark-fill-button, .bookmark-button, .bookmark-fill-button {	font-size: 1.5rem;
+	color: #fff;
+}
+.bookmark-button.ml-3:hover {
+	color: var(--noir);
+}    
+/* Color btn ... a gauche de Bookmark en Hover =====================================*/    
+button[data-toggle-second="tooltip"]:hover, button[data-toggle-second="tooltip"]:focus, .show > button[data-toggle-second="tooltip"].btn-secondary.dropdown-toggle, .focus-round:focus, .focus-round:hover {
+	color: var(--noir);
+}
+/* Color Du Menu Drop drown btn ... a gauche de Bookmark en Hover =====================================*/        
+.dropdown-tools li > button, .dropdown-tools li > a {
+	color: var(--blanc);
+	font-weight: bold;
+}    
+    
+/* Color Bookmark Star et hover =====================================*/        
+.results-header > div:first-child > button {
+	color: #fff;
+}
+#star-icon:hover {
+	color: var(--trg-color);
+}
+
+/* En-TETE DU GAUCHE DE LA PAGE RESULTATS ET COLOR  =====================================*/         
+.title-facet {
+	background-color: var(--bg-widget);
+	color: var(--trg-color);
+}
+.title-facet:hover {
+	color: var(--trg-hover);
+}     
+/* COLOR TEXTE BLOCK GAUCHE DE LA PAGE RESULTATS =====================================*/     
+.content-facet a {
+	color: var(--blanc);
+}
+.text-muted {
+	color: var(--blanc)!important;
+}
+    
+/* BORDER-COLOR DE LA 2snd RECHERCHE DANS  BLOCK GAUCHE DE LA PAGE RESULTATS =====================================*/     
+.secondary-search {
+	border-bottom: 1px solid var(--trg-color);
+}
+/* TEXTE COLOR DE LA 2snd RECHERCHE DANS  BLOCK GAUCHE DE LA PAGE RESULTATS =====================================*/      
+.search.size-regular {
+	color: var(--blanc);
+} 
+  
+/*===================================== PAGE VERIFIER  =====================================*/   
+
+    
+/*BANDEAUS QUOTE ==================================*/ 
+blockquote {
+	border-left: 4px solid var(--trg-color);
+	background: var(--bg-ban);
+}
+    
+/* BORDURE DU TABLEAU et BG ==================================*/       
+    
+.table-bordered th, .table-bordered td {
+	border: 0px solid var(--bg-widget);
+}    
+.table thead th {
+	border-bottom: 2px solid var(--bg-widget);
+}
+.table tbody + tbody {
+	border-top: 2px solid var(--bg-widget);
+}    
+
+.table-striped tbody tr:nth-of-type(2n+1) {
+	background-color: var(--bg-color);
+}
+.table-bordered {
+	border: 0px solid var(--bg-widget);
+}    
+    
+/* COLOR TEXTE TABLEAU ==================================*/         
+.table {
+	color: var(--blanc);
+}    
+/* COLOR DES BTN TEXTE NOMBRE ET FILTRE + HOVER ==================================*/     
+.btn.btn-default {
+	color: var(--trg-color);
+}    
+.btn.btn-default:hover {
+	color: var(--trg-hover);
+}
+/* BG DES BTN DANS LE MENU TEXTE NOMBRE ET FILTRE ==================================*/        
+.btn.btn-xs.btn-primary.active.disabled {
+	background: var(--trg-hover);
+	border-color: var(--trg-hover);
+}
+    
+/* COLOR MENU à GAUCHE ==================================*/        
+    
+.connected-navigation .list-group .list-group-item {
+	color: var(--blanc);
+    border-left: 0px solid var(--bg-widget);
+}
+    
+/* BG MENU à GAUCHE ==================================*/        
+.connected-navigation .list-group .list-group-item.active, .connected-navigation .list-group .list-group-item.active:hover {
+	color: var(--blanc);
+	border-left-color: var(--bg-widget);
+	background-color: var(--bg-widget);
+	filter: brightness(150%);
+}   
+.connected-navigation .list-group .list-group-item:hover {
+	color: var(--blanc);
+	border-left-color: var(--bg-widget);
+	background-color: var(--bg-widget);
+	filter: brightness(150%);
+}  
+ 
+/* BG ET COLOR BADGE VERSION ET ID ==================================*/      
+.bg-beige.versions.pt-1.pb-1 {
+	background-color: var(--trg-color);
+    color: var(--noir);
+}    
+.hal-bgtext.versions span:nth-child(3), .bg-beige.versions span:nth-child(3) {
+	color: var(--noir);
+}
+.hal-bgtext.versions span:first-child, .bg-beige.versions span:first-child {
+	color: var(--noir);
+}
+/* FILTER SUR ICON CLOSE */     
+.icon-close {
+	filter: invert(100%);
+}    
+/* BG ZONE AUTEUR ==================================*/        
+div.authors {
+	background: transparent;
+}    
+/* BORDURE PREVIEW PDF ==================================*/     
+tr.files:nth-child(1) > td:nth-child(2) > div:nth-child(1) > iframe:nth-child(1){
+	width: 100%;
+	height: 400px;
+	border: 1px solid #2a2a2e;
+}    
+/* Toggle Menu Langue BG BORDER ==================================*/      
+.textarea-group > button.dropdown-toggle {
+	background: var(--trg-color) !important;
+	border: 1px solid var(--trg-color) !important;
+} 
+    
+/* BG ZONE HISTORIQUE  ==================================*/     
+.alert-history {
+	background-color: var(--bg-color);
+}  
+.alert-history .badge.badge-violet {
+	background-color: #595380;
+}
+/* BTN MODERATION + Hover ==================================*/       
+.moderation-actions .btn-default {
+	background-color: var(--bg-ban) !important;
+	color: var(--blanc) !important;
+}    
+.moderation-actions .btn-default:hover {
+	background-color: var(--trg-hover) !important;
+	border: 1px solid var(--bg-widget);
+	color: var(--noir) !important;
+} 
+.moderation-actions .btn {
+	border: 1px solid var(--bg-widget);
+}    
+/*===================================== PAGE RECAP =====================================*/       
+ 
+/* PICTO INSTITUT COLOR */    
+.structures div:first-child {
+	color: var(--blanc);
+}   
+/* Zone Recap Affiliation BG et Color ==================================*/    
+.structures.bg-beige {
+	background-color: var(--bg-color);
+}
+
+
+section.flex-74 .authors .btn-popover, section.flex-74 .structures .btn-popover, #preview-doc .authors .btn-popover, #preview-doc .structures .btn-popover {
+	color: var(--blanc);
+}
+.structures div:nth-child(2) span {
+	background-color: transparent;
+}
+    
+.bg-beige {
+	background-color: var(--bg-ban);
+}    
+.col-lg-4 .bg-beige > a {
+	color: var(--trg-color)!important;
+}
+.col-lg-4 .bg-beige a {
+	color: var(--blanc);
+}    
+/* Zone Citation ==================================*/       
+#citation {
+	background-color: var(--bg-widget);
+}
+/* Btn Afficher plus de détails ==================================*/    
+.authors + button, #authors-detailed button.btn-hide-show {
+	color: var(--trg-color);
+	border: 1px solid var(--trg-color);
+}
+#authors-detailed button.btn-hide-show {
+	background-color: #1B2C3C;
+}    
+/* Color Text Identifiant Menu Gauche ==================================*/     
+.identifier-list ul, .identifier-list span:nth-child(2) {
+	color: var(--blanc);
+} 
+.identifier-list span:nth-child(2) a {
+	color: var(--blanc);
+}    
+/* Panel PDF DOC ==================================*/     
+
+.panel-doc > button:first-child {
+	color: var(--blanc);
+	background-color: var(--bg-widget);
+	border-bottom: 1px solid var(--trg-color);
+}    
+    
+.panel-doc .panel-doc-detailed {
+	background-color: var(--bg-widget);
+} 
+   
+#viewer-detailed > div:nth-child(1) .col-md-9 iframe {
+	border: 1px solid #2a2a2e;
+}    
+
+/* Icon Thumbnail Panel PDF DOC ==================================*/    
+    
+#list-thumbnail-viewer span, .viewer-content span {
+	color: var(--blanc);
+}
+#viewer-detailed > div:nth-child(1) .col-md-2 .thumbnail-viewer.active {
+	border: 1px solid var(--trg-color);
+	cursor: default;
+}    
+#viewer-detailed > div:nth-child(1) .col-md-2 .thumbnail-viewer .default-thumbnail i {
+	font-size: 60px;
+	color: var(--blanc);
+}    
+#viewer-detailed > div:nth-child(1) .col-md-2 .thumbnail-viewer {
+	background-color: transparent;
+} 
+    
+/* Zone HISTORIQUE ==================================*/     
+#history-detailed {
+	border: 0px solid #e8e8e800;
+}    
+ 
+/* BTN EXPORT Mot Clé Domaine */   
+    
+.hal-bgtext, a.hal-bgtext, .keywords a.hal-bgtext, .domains a.hal-bgtext {
+	background-color: var(--trg-color);
+	color: var(--noir);
+}    
+.hal-bgtext:hover, a.hal-bgtext:hover, .keywords a.hal-bgtext:hover, .domains a.hal-bgtext:hover {
+	background-color: var(--trg-hover);
+    color: var(--blanc);
+}    
+    
+/*===================================== PAGE MODIF DEPOT =====================================*/     
+
+/* COMMUN A TOUTE LA PAGE  ==================================*/         
+
+/* BG ZONE DATE ET CALENDRIER */    
+#date-id, #writingDate-id,#edate-id {
+	background: var(--bg-ban) !important;
+}    
+.ui-datepicker {
+	background: var(--bg-ban);
+	border: 1px solid var(--trg-color);
+}  
+.ui-datepicker .ui-state-default {
+	color: var(--trg-color);
+}    
+.ui-datepicker-next .ui-icon-circle-triangle-e::before {
+	color: var(--trg-color);
+} 
+/* Liste à Gauche Fichier / Métadonnées / Validation =============================*/ 
+#list-item-deposit li:hover {
+	background-color: var(--trg-hover);
+}
+.hal-valid-submit-btn:hover {
+	background: transparent;
+	color: var(--trg-color);
+	border-color: var(--trg-color);
+}    
+/* Btn VÉRIFIER AVANT DE DÉPOSER =============================*/       
+.hal-valid-submit-btn {
+	position: fixed;
+	bottom: 50px;
+	background: inherit;
+	border: 1px solid #F9AEAE;
+	color: #F9AEAE;
+	padding: 19px 18px 16px 18px;
+	margin-right: -1px;
+	transition: 0.5s;
+}    
+/* DropDown Generale =============================*/    
+    
+.form-meta .row select {
+	background: var(--bg-ban);
+	border: 1px solid var(--trg-color);
+}    
+ 
+.form-meta .row .input-group span.input-group-btn button {
+	color: var(--noir);
+	background-color: var(--trg-color);
+}    
+.form-meta .row .input-group span.input-group-btn button:hover {
+	background-color: var(--trg-hover);
+    color: var(--blanc);
+}    
+/* COLOR TEXTE ROUGE ALERTE ET INFO  ==================================*/      
+.extract-info .close-extract-info, .extract-info .close-error-info, .author-info .close-extract-info, .author-info .close-error-info, .mainmeta-info .close-extract-info, .mainmeta-info .close-error-info, .related-info .close-extract-info, .related-info .close-error-info {
+	color: #F9AEAE;
+}
+.extract-info > div.errors, .author-info > div.errors, .mainmeta-info > div.errors, .related-info > div.errors {
+	color: #F9AEAE;
+}    
+.has-error .help-block.error, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline {
+	color: #F9AEAE;
+}    
+/* ================================== Block Je selectionne un type de document  ==================================*/     
+
+/* BG ==================================*/       
+.modal-content {
+	background-color: var(--bg-widget);
+}
+#modal-typdoc .modal-dialog .modal-header {
+	background: var(--bg-widget);
+}
+    
+/* COLOR Font du Titre et btn close ==================================*/       
+#modal-typdoc .modal-dialog .modal-header .modal-title {
+	color: var(--blanc);
+}    
+.close {
+	text-shadow: unset
+}
+.close:hover {
+	color: #fff;
+}    
+.red, .red::before {
+	color: #F9AEAE !important;
+} 
+
+/* MESSAGE ==================================*/
+.flash-message {
+	background-color: var(--bg-ban);
+	border-radius: 0;
+	margin-bottom: 47px;
+}    
+.flash-message .col-lg-1 {
+	background-color: var(--trg-color);
+}
+/* BTN BG ET COLOR  ==================================*/    
+ .typdoc-test.btn.btn-typdoc {
+	color: var(--blanc);
+}
+ .typdoc-test.btn.btn-typdoc:hover {
+	color: var(--noir);
+}       
+#modal-typdoc .modal-dialog .typdoc-btn-group {
+	background-color: var(--bg-widget);
+	filter: brightness(150%);
+}        
+#modal-typdoc .modal-dialog .typdoc-btn-group:not(.selected):hover, #modal-typdoc .modal-dialog .typdoc-btn-group:not(.selected).btn:focus {
+	background: var(--trg-hover);
+	filter: brightness(100%);
+}    
+#modal-typdoc .modal-dialog .typdoc-btn-group.selected {
+	background-color: var(--trg-hover);
+} 
+    
+    
+/* Color Type de Doc  ==================================*/  
+.color-black {
+	color: var(--blanc);
+} 
+.hal-secondary-button span, a.hal-secondary-button span {
+	color: var(--trg-color);
+}    
+.hal-secondary-button:hover, .hal-secondary-button:hover span, a.hal-secondary-button:hover, a.hal-secondary-button:hover span {
+	color: var(--trg-hover);
+}    
+    
+/* BG et Color En-Tete  ==================================*/      
+.submission-form .submit-step .step-title {
+	padding: 15px 36px;
+	font-size: 1.15rem;
+	color: var(--trg-hover);
+	background: var(--bg-ban);
+}    
+    
+#step-file {
+	padding: 15px 36px;
+	color: var(--trg-hover);
+	background: var(--bg-ban);
+    margin-bottom: 0px;
+}        
+.submission-form h2 small {
+	color: var(--blanc);
+}   
+/* Font Color Zone Menu Gauche  ==================================*/  
+#list-item-deposit li a {
+	color: var(--blanc);
+}    
+    
+    
+/* ================================== Zone PJ  ==================================*/   
+
+    
+/* Btn Parcourir  ==================================*/  
+.hal-option-button, .hal-privilege-button {
+	background-color: var(--trg-color);
+    color:var(--noir);
+}
+    
+.hal-option-button:hover, .hal-privilege-button:hover {
+	background-color: var(--trg-hover);
+}
+.hal-submit-button a, .hal-option-button a, .hal-visualize-button a, .hal-save-button a, .hal-privilege-button a, .hal-warning-button a, .hal-login-button a, .hal-secondary-button a, .hal-bgtext a, .hal-valid-submit-btn a, .btn-primary-orange a {
+	color: var(--noir);
+} 
+/* BTN SUPPRIMER */    
+li.not-white:nth-child(10) > div:nth-child(1) > button:nth-child(1) {
+    background-color: #F9AEAE;
+} 
+li.not-white:nth-child(10) > div:nth-child(1) > button:nth-child(1):hover {
+    background-color: #aa7474;
+    color:var(--noir);
+}     
+/* BG UploadZone  ==================================*/       
+.upload-area {
+	border: 1px dashed var(--trg-hover);
+    transition: var(--transition);
+}    
+.upload-area:hover {
+	background-color: var(--trg-hover);
+	transition: var(--transition);
+}
+.upload-area .icon-upload {
+	color: var(--trg-color);
+}    
+.upload-area .upload-text, .upload-area .upload-text-sep {
+	color: var(--trg-color);
+}    
+/* BG Zone  ==================================*/    
+.table-files-head > thead:nth-child(1){
+	background-color: var(--bg-ban);
+}
+/* BG MAIN FILE  ==================================*/       
+#div-files {
+	background-color: var(--bg-widget) !important;
+}
+#visible-date-0, #visible-date-1, #visible-date-2, #visible-date-3, #visible-date-4, #visible-date-5, #visible-date-6, #visible-date-7, #visible-date-8, #visible-date-9, #visible-date-10 {
+	border: unset !important;
+}    
+    
+    
+/* BG FILE  ==================================*/    
+.row-file.file-main {
+	background: var(--bg-color);
+	border-bottom: 1px solid var(--trg-color);
+}
+.row-file td.delete {
+	background: var(--bg-ban);
+} 
+.row-file {
+	background: var(--bg-ban);
+	border-bottom: 1px solid var(--trg-color);
+}
+.row-file.file-main .details, .row-file td.details {
+	background: var(--bg-ban);
+    transition: var(--transition);
+}
+.details.text-center:hover {
+	background: var(--trg-color) !important;
+}    
+/* Font Color FILE  ==================================*/     
+
+.row-file .file-more {
+	color: var(--blanc);
+}    
+    
+.row-file .file-size {
+	color: var(--blanc);
+}    
+
+.row-file .file-name {
+	color: var(--blanc);
+}    
+/* BORDER TD FILE  ==================================*/           
+.row-file:not(.file-main):not(:last-child) td:not(:last-child) {
+	border-bottom: 1px solid var(--trg-color);
+} 
+/*  Téléverser à partir d'un lien ======================*/    
+.btn-link {
+	color: var(--trg-color);
+}    
+.btn-link:hover {
+	color: var(--trg-hover);
+}
+    
+
+/* ================================== Zone METADATA ==================================*/     
+
+/* DropDown ==================================*/        
+.dropdown-item {
+	color: var(--blanc);
+}
+ul.dropdown-menu li:not(.not-white):hover {
+	color: var(--noir);
+}
+    
+/* BG Menu DOI et Border Zone texte ==================================*/        
+#identifiertype {
+	z-index: 1;
+	background: var(--trg-color);
+	border: 1px solid var(--trg-color);
+	color: var(--noir);
+}
+#identifiertype:hover, .show > #identifiertype {
+	background: var(--trg-hover);
+    color: var(--blanc);
+}    
+.load-by-id.input-group button, .load-by-id.input-group input {
+	border: 1px solid var(--trg-color);
+}    
+    
+/* ================================== Zone Auteur  ==================================*/      
+
+/* Menu Auteur ==================================*/    
+.ui-autocomplete.ui-front {
+	z-index: 1060 !important;
+	background-color: var(--bg-widget);
+	max-height: 300px;
+	overflow: auto;
+	padding: 10px;
+	list-style: none;
+	box-shadow: 0px 3px 6px #00000029;
+	border: 1px solid var(--trg-color);
+}
+/* Ajout Auteur BG et COLOR  ==================================*/    
+.ui-autocomplete.ui-front .ui-menu-item.highlight {
+	background: var(--trg-color);
+} 
+.ui-autocomplete.ui-front .ui-menu-item.highlight:hover {
+	background:  var(--trg-hover)!important;
+}  
+.ui-autocomplete.ui-front .ui-menu-item.highlight a {
+	color: var(--noir)!important;
+}
+.ui-autocomplete.ui-front .ui-state-active {
+	background: var(--bg-ban);
+}    
+/* COLOR Structure ==================================*/      
+
+.ui-autocomplete.ui-front .ui-menu-item span > span:not(.acronym), .ui-autocomplete.ui-front .ui-menu-item span > dl, #struct-info span > span:not(.acronym), #struct-info span > dl {
+	color: var(--blanc);
+}   
+    
+/* Il manque un/des auteur(s)  ==================================*/     
+.extract-info, .author-info, .mainmeta-info, .related-info {
+	background: #624949;
+}
+    
+    
+/* ================================== Zone Affiliation Auteur ================================== */  
+    
+    
+/* BG Gauche et color ==================================*/   
+div.authors .author-icon-drag, div.authors .author-info, div.authors .author-icon-edit {
+	background: var(--trg-hover);
+}
+div.authors .author-info .id-hal-author {
+	color: var(--noir);
+}
+
+/* color Picogramme ,btn drag & drop et fleche +==================================*/       
+div.authors .author-icon-drag {
+	color: var(--noir);
+}    
+div.authors .author-icon-mv-top, div.authors .author-icon-mv-bottom {
+	color: var(--noir);
+}
+div.authors .author-icon-edit button i {
+	color: var(--noir);;
+}
+
+/* Dropdown +==================================*/   
+    
+div.authors .div-author-role select {
+	border: 1px solid var(--noir);
+	background: var(--bg-ban);
+	color: var(--blanc);
+}
+    
+/* BG Droite et color ==================================*/       
+ div.authors .author-affiliations {
+	background: #444;
+}
+    
+/* Before ... à Droite des auteurs ==================================*/  
+.icon-more::before {
+	filter: invert(100%);
+}    
+    
+/* Zone Texte  ================================*/     
+
+.structure-name i, .referential i {
+	color: #fff;
+}    
+div.authors .author-affiliations .searchStructure {
+	color: var(--blanc);
+}
+#searchStructure1:focus-visible, #searchStructure2:focus-visible, #searchStructure3:focus-visible, #searchStructure4:focus-visible,
+#searchStructure5:focus-visible, #searchStructure6:focus-visible, #searchStructure7:focus-visible, #searchStructure8:focus-visible,
+#searchStructure9:focus-visible, #searchStructure10:focus-visible, #searchStructure11:focus-visible, #searchStructure12:focus-visible,
+#searchStructure13:focus-visible, #searchStructure14:focus-visible, #searchStructure15:focus-visible, #searchStructure16:focus-visible,
+#searchStructure17:focus-visible, #searchStructure18:focus-visible, #searchStructure19:focus-visible, #searchStructure20:focus-visible,
+#searchStructure21:focus-visible, #searchStructure22:focus-visible, #searchStructure23:focus-visible, #searchStructure24:focus-visible{
+	outline: 0px;
+	border-color: var(--trg-color);
+}
+    
+/* Zone Avec BTN Bas de block  ================================*/ 
+.step-author-actions {
+	background: var(--bg-widget);
+}    
+.btn-norender {
+	border: none;
+	color: var(--trg-color);
+}
+
+    
+    
+/* ================================== Zone Informations principales ================================== */      
+
+    
+/* Btn Langue ================================*/     
+.form-meta .row .textarea-group > button.dropdown-toggle {
+	background: var(--trg-hover) !important;
+	border: 1px solid var(--trg-hover) !important;
+}
+.form-meta .row textarea {
+	border: 1px solid var(--trg-hover) !important;
+    border-radius: 0 0 5px 5px !important;
+}
+    
+/* Btn Ajouter sous langue ================================*/      
+.form-meta .row .textarea-group .pull-right button {
+	color: var(--trg-color);
+}    
+    
+/* ================================ Zone Domaine  ================================ */  
+.select2-container--default {
+	border: 1px solid var(--trg-color);
+}    
+.form-meta .row .selection {
+	background: var(--bg-ban);
+}    
+.select2-container--default .select2-selection--single {
+	background-color: transparent;
+    border: 1px solid var(--trg-color);
+}    
+.form-meta .row #select2-mainDomain-container:empty {
+	background-color: transparent !important;
+}
+    
+/* BG DU DROP DOWN ==========================*/    
+.select2-container--default.select2-container--open .select2-dropdown--below {
+	background: var(--bg-ban);
+}
+.select2-dropdown {
+	background-color: var(--bg-ban);
+} 
+.select2-container--default .select2-results__option--highlighted[aria-selected] > span.item-label, .select2-container--default .select2-results__option--highlighted[aria-selected]:hover > span.item-label {
+	background-color: var(--trg-hover) !important;
+	color: var(--noir) !important;
+}
+    
+/* Zone Texte du Dropdown =============================*/     
+.select2-container--default .select2-search--dropdown .select2-search__field {
+	border: 1px solid var(--trg-color);
+	background: var(--bg-widget);
+	color: var(--blanc);
+    outline: 0;
+} 
+/* Second Zone Dropdown =============================*/      
+.select2-container--default .select2-selection--multiple {
+	background-color: transparent;
+}
+.select2-search__field {
+	color: var(--blanc);
+}
+    
+/* ================================ Zone Validation  ================================ */      
+.step-recap .recap-citation.recap-doublon, .step-recap .invalid-steps {
+	background: var(--bg-ban);
+}    
+    
+ 
+/* ======================================================================================================== */     
+/* ============================================= AUTRE PAGE =============================================== */        
+/* ======================================================================================================== */   
+
+/* ================================ Apparence ================================ */ 
+
+/* BG DE LA ZONE APPARENCE =========================*/
+#header-bg {
+	background-color: var(--bg-widget);
+}    
+
+/* ================================ En-tête ================================ */     
+
+.table-hover tbody tr {
+	background-color: var(--bg-widget);
+}        
+.table-hover tbody tr:hover {
+	background-color: var(--trg-hover);
+}
+/* ================================ General ================================ */   
+.form-control:disabled, .form-control[readonly] {
+	background-color: var(--trg-hover);
+	filter: grayscale(100%);
+	color: var(--noir);
+} 
+    
+/* ================================ Page Modif des Menu ================================ */     
+.edit-navigation .ui-sortable li > div, #list_typdoc li > table {
+	background: var(--bg-color);
+}
+.edit-navigation .ui-sortable li:hover div:hover, #list_typdoc li > table:hover {
+	background: var(--trg-hover);
+	color: var(--noir);
+}    
+/* ================================ Profil ================================ */     
+
+/* BTN CRAYON EDITION PROFIL */    
+.btn-primary-blue {
+	background-color: var(--trg-color);
+	color: var(--noir);
+}
+.btn-primary-blue:hover {
+	background-color: var(--trg-hover);
+	color: var(--noir);
+}    
+/* COLOR SEPARATOR LIGNE */    
+.table th, .table td {
+	border-top: 1px solid var(--bg-color);
+}    
+/* COLOR NOM ============================ */
+.account .value, .user-idhal .value, .preferences .value, .account .field, .user-idhal .field, .preferences .field {
+	color: var(--blanc);
+}
+/* MES AFFILIATIONS ======================== */    
+input.input-flex {
+	border: solid 1px var(--trg-color);
+	background: var(--bg-ban);
+}
+/* COLOR TRAIT PREF */
+.preferences .title-prepend {
+	border-bottom: 2px solid var(--blanc);
+}
+/* ZONE TEXT DOMAIN ============================*/    
+.select2-container--hal .select2-selection--multiple {
+	background-color: var(--bg-ban);
+	border: 1px solid var(--trg-color);
+}    
+.select2-search__field {
+	background-color: var(--bg-ban);
+}
+/* DROPDOWN LANGUE */    
+.preferences .hal-select {
+	background: var(--bg-ban);
+	color: var(--blanc);
+	border: 1px solid var(--trg-color);
+} 
+    
+    
+/* ================================ Tableau de bord ================================ */        
+
+/* Color Btn Mois/Année */    
+.stat-graph .select-range-depot .btn, .stat-graph .select-range .btn, .stat-spinner .select-range-depot .btn, .stat-spinner .select-range .btn {
+	color: var(--blanc);
+}
+/* COLOR SEPARATOR */
+.stat-counter > div:not(:first-child) {
+	border-left: 1px solid var(--bg-widget);
+}    
+/* Color Chiffre et Texte */  
+.stat-counter .counter-large {
+	color: var(--trg-color);
+}
+.stat-counter, .stat-graph h4, .stat-spinner h4 {
+	color: var(--blanc);
+}
+    
+/* ================================ IDHAL ================================ */      
+
+/* BANDEAU Configurer mon IdHAL ===================================*/    
+.user-section-menu {
+	background-color: var(--bg-color);
+}
+.section-content .nav-pills .nav-item .nav-link.active {
+	color: var(--trg-color);
+}
+.section-content .nav-pills .nav-item .nav-link.active::before {
+	border-bottom: 7px solid var(--trg-color);
+}
+ 
+/* Color Texte Obligatoire */   
+.ccsd_form_required, div.form-group.row label.required::after  {
+	color: #F9AEAE;
+} 
+    
+/* BG BTN ENREG */    
+.btn-primary-darkblue {
+	background-color: var(--trg-color);
+	color: var(--noir);
+} 
+.btn-primary-darkblue:hover {
+	background-color: var(--trg-hover);
+} 
+    
+/* ================================ MON CV ================================ */      
+
+/* BG ZONE NO CV */    
+    
+.no-library, .no-suggest, .no-favorite, .no-stat, .no-deposit, .no-activity, .no-cv {
+	background-color: var(--bg-widget);
+}    
+ 
+/* ================================ MES DEPOTS PAGE RECAP ================================ */        
+ 
+/* COLOR TEXTE TITRE */    
+.strong.view-deposit {
+	color: var(--blanc) !important;
+} 
+.sort {
+	color: var(--blanc);
+}    
+    
+/* DROP DOWN ...*/  
+    
+#favorite-user .dropdown-menu, #favorite-user-searches .dropdown-menu, #carouselDepots .dropdown-menu {
+	background-color: var(--bg-ban);
+
+}   
+/* ================================ Transfert de HAL vers ORCID ================================ */      
+  
+    
+/* BTN ORCID ========================*/
+    
+.btn-orcid {
+	border: solid 1px var(--trg-color);
+}
+.btn-orcid:hover {
+	background-color: var(--trg-hover);
+	color: var(--blanc);
+}
+    
+/* ========================== Mes partages de propriétés ========================== */ 
+    
+    
+/* Text Color Titre Rubrique */ 
+    
+.section-content .nav-pills .nav-item .nav-link {
+	color: var(--blanc);
+}
+.section-content .nav-pills .nav-item .nav-link::before {
+	border-bottom: 1px solid var(--blanc);
+}    
+    
+/* ========================== Consultation ========================== */    
+    
+.browse-list li:hover {
+	background: var(--trg-hover);
+}    
+.browse-list li a {
+	color: var(--blanc);
+    transition:var(--transition);
+}    
+.browse-list li a:hover {
+	color: var(--noir);
+}
+    
+/* Style recherche alphabet ==============*/     
+.browse-alphabet li a {
+	background-color: var(--bg-widget);
+	border: 1px solid var(--bg-color);
+}    
+.browse-alphabet li a:hover {
+	background: var(--trg-hover);
+	color: var(--noir);
+}
+/* Style recherche alphabet btn Tous ==============*/    
+.browse-alphabet li.active a {
+	background: var(--trg-hover);
+}    
+.btn-default {
+	background-color: var(--bg-widget);
+	border-color: var(--bg-color);
+}
+    
+/* Associer des collections au portail ==========================*/     
+    
+.dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+	color: var(--blanc);
+}    
+.dataTables_wrapper .dataTables_filter input, .dataTables_wrapper .dataTables_length select {
+	border: 1px solid var(--trg-color);
+	background-color: var(--bg-color);
+	color: var(--blanc);
+}
+input:focus-visible {
+	outline: 0;
+} 
+
+/* COLOR ET BG Des Btns unique de la page */    
+#collection .btn-default {
+	border: 1px solid #8a7bee;
+	color: #8a7bee;
+	background-color: #292446;
+}    
+.form-actions .btn.btn-cancel {
+	color: #FF8886 !important;
+}    
+/* Documents en Attente ===========================================*/      
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+	color: var(--blanc) !important;
+}
+#moderate {
+	background-color: var(--bg-widget);
+}    
+/* Utilisateurs ===========================================*/    
+    
+.help-block {
+	color: var(--blanc) !important;
+}    
+  
+/* LOGO DU CCSD ==================*/    
+#profil_ccsd > legend:nth-child(1) > img:nth-child(1), #profil_hal > legend:nth-child(1) > img:nth-child(1){
+	filter: brightness(0) invert(100%);
+}    
+}
+
+@-moz-document url-prefix("https://cas.ccsd.cnrs.fr/cas/login") {
+
+    
+/* Barre Top ============================*/    
+#nav-services {
+	background-color: var(--bg-color);
+}
+.navbar-inverse {
+	background-color: var(--bg-color);
+	border-color: var(--bg-color);
+}    
+/* LOGO ======================*/  
+.title-img {
+	margin-bottom: 40px;
+	filter: brightness(0%) invert(100%);
+}    
+/* BG BODY et TXT COLOR  =====================*/    
+body {
+	background-color: var(--bg-color);
+    color: var(--blanc);
+}  
+
+    
+/* PANEL ====================*/    
+    
+.panel {
+	background-color: var(--bg-widget);
+}   
+#login-account .panel {
+	border: 2px solid var(--bg-widget);
+}    
+#create-account-panel .panel, #create-account-panel .panel-heading {
+	background: var(--bg-widget);
+}
+.panel-default {
+	border-color: var(--bg-widget);
+}
+    
+/* COLOR TXT PANEL ==============*/    
+.panel-default > .panel-heading {
+	color: var(--blanc);
+}
+/* COLOR A TXT PANEL ==============*/      
+#forgot-login, #forgot-password {
+	color: var(--trg-color);
+}    
+ 
+/* BOX LOGIN BG ET COLOR ==================*/    
+#username, #password {
+	border: 1px solid var(--trg-color);
+	background-color: var(--bg-ban);
+    color: var(--blanc);
+}
+    
+/* BTN GENERAL ====================*/ 
+    
+.btn-primary {
+	color: var(--noir) !important;
+	background: var(--trg-color);
+    transition:var(--transition);
+}    
+.btn-primary:hover {
+	color: var(--blanc) !important;
+	background-color: var(--trg-hover);
+	border-color: var(--trg-hover);
+}    
+
+    
+#orcid {
+	color: var(--noir) !important;
+    transition:var(--transition);
+} 
+#orcid:hover {
+	background-color: #568625;
+	color: var(--blanc) !important;
+} 
+#federation {
+    background-color: #e66e71;
+	color: var(--noir) !important;
+    transition:var(--transition);
+}  
+#federation:hover {
+	background-color: #b52b2e;
+	color: var(--blanc) !important;
+}  
+    
+    
+/* COLOR TXT INFO BAS DE PAGE =============================*/    
+.text-info {
+    color: var(--blanc);
+	
+}
+.text-muted {
+	color: var(--blanc);
+}    
+a {
+	color: var(--trg-color);
+}    
+a:focus, a:hover {
+	color: var(--trg-hover);
+}    
+    
+    
+    
+}
