@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Umbrhal
 @namespace   HyperSoby
-@version     1.0
+@version     1.0.1
 @author      Lallemant Christopher
 @homepageURL 	https://github.com/Hypersoby/Hal-Inria-Scripts
 @updateURL   	https://github.com/Hypersoby/Hal-Inria-Scripts/raw/master/Umbrhal.user.css
@@ -273,6 +273,8 @@ footer {
 }
 .btn.btn-sm.btn-default.dropdown-toggle.form-btn-lang:hover {
 	color: var(--blanc);
+    background-color: var(--trg-hover) !important;
+    border: 1px solid var(--trg-hover) !important;
 }    
 /* BANDEAU WARNING/ SUCCESS  ================================*/       
 .alert-warning {
@@ -801,6 +803,10 @@ section.flex-74 .authors .btn-popover, section.flex-74 .structures .btn-popover,
 #citation {
 	background-color: var(--bg-widget);
 }
+/* Zone Resumé ==================================*/        
+.editable-click, a.editable-click, a.editable-click:hover {
+	border-bottom: none;
+}    
 /* Btn Afficher plus de détails ==================================*/    
 .authors + button, #authors-detailed button.btn-hide-show {
 	color: var(--trg-color);
@@ -1195,7 +1201,62 @@ div.authors .author-icon-mv-top, div.authors .author-icon-mv-bottom {
 div.authors .author-icon-edit button i {
 	color: var(--noir);;
 }
-
+    
+/* ================================== Zone Affiliation Auteur Détail en mode Cascade ================================== */     
+   
+.structure-element-researchteam {
+	background-color: #0f2335;
+	border-color: #69BAFF!important;
+}
+.structure-element-researchteam:hover {
+	background-color: #0f2335;
+}        
+.structure-element-laboratory {
+	background-color: #6b4427;
+	border-color: #FFA75A!important;
+}
+.structure-element-laboratory:hover {
+	background-color: #6b4427;
+}       
+.structure-element-institution {
+	background-color: #381919;
+	border-color: #FF8886!important;
+}
+.structure-element-institution:hover {
+	background-color: #381919;
+}    
+.structure-element-regroupinstitution  {
+	background-color: #29202b;
+	border-color: #f6b5ff!important;
+}
+.structure-element-regroupinstitution:hover  {
+	background-color: #29202b;
+}      
+#modal-author .modal-dialog .modal-content, #modal-ref .modal-dialog .modal-content, .structure-element-researchteam:hover h6, .structure-element-laboratory:hover h6, .structure-element-institution:hover h6 {
+	color: var(--blanc);
+}
+#modal-author .modal-dialog .modal-content h6 .label-rgpinst, #modal-ref .modal-dialog .modal-content h6 .label-rgpinst {
+	background: #29202b;
+	border: 1px solid #f6b5ff;
+    display: inline-block;
+}
+ #modal-author .modal-dialog .modal-content .label, #modal-ref .modal-dialog .modal-content .label {
+	padding: 4px 7px 0px 7px;
+	line-height: 21px;
+}   
+#modal-author .modal-dialog .modal-content h6 .badge, #modal-ref .modal-dialog .modal-content h6 .badge {
+	background: #221e1e;
+	border-radius: 4px;
+	margin: 2px;
+	padding: 10px 5px 5px 5px;
+	border: 1px solid #808080;
+}    
+.structure-element-researchteam, .structure-element-laboratory, .structure-element-institution, .structure-element-regroupinstitution {
+	padding: 5px 10px;
+}    
+#modal-author .modal-dialog .modal-content .label-default, #modal-ref .modal-dialog .modal-content .label-default {
+	background: var(--bg-ban);
+}    
 /* Dropdown +==================================*/   
     
 div.authors .div-author-role select {
