@@ -52,7 +52,7 @@ Cependant aucun support n'est disponible pour le navigateur Internet Explorer d�
 3. *Si vous utilisez `Chrome` cliquez sur l'icône en forme de `puzzle` et épinglez ensuite `Stylus` dans votre barre de navigation.*
 ![Chrome](https://i.imgur.com/a6PzHSY.png)
 
-4. Pour télécharger et installer le, il vous suffit de cliquer sur le liens `Script Umbrhal` ci-dessous puis de cliquer sur installer sur le panneau de gauche. /!\ Vous pourrez ensuite fermer l'onglet /!\
+4. Pour télécharger et installer le Script, il vous suffit de cliquer sur le liens `Script Umbrhal` ci-dessous puis de cliquer sur installer sur le panneau de gauche. /!\ Vous pourrez ensuite fermer l'onglet /!\
 
 ## Lien de téléchargement 
 
