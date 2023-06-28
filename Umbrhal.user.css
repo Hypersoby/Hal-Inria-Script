@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Umbrhal
 @namespace   HyperSoby
-@version     1.0.1
+@version     1.0.3
 @author      Lallemant Christopher
 @homepageURL 	https://github.com/Hypersoby/Hal-Inria-Scripts
 @updateURL   	https://github.com/Hypersoby/Hal-Inria-Scripts/raw/master/Umbrhal.user.css
@@ -15,7 +15,7 @@
 
 ==/UserStyle== */
 
-@-moz-document url-prefix("https://inria.hal.science/"), url-prefix("https://cas.ccsd.cnrs.fr/cas/login") {
+@-moz-document url-prefix("https://inria.hal.science/"), url-prefix("https://cas.ccsd.cnrs.fr/cas/login"), url-prefix("https://inria.halpreprod.archives-ouvertes.fr/"), url-prefix("https://cv.hal.science/"), url-prefix("https://cv-preprod.archives-ouvertes.fr/") {
    
 :root {
 
@@ -36,7 +36,7 @@
     --transition: .3s cubic-bezier(.25,.8,.5,1);
 }   
 }
-@-moz-document url-prefix("https://inria.hal.science/") {
+@-moz-document url-prefix("https://inria.hal.science/"), url-prefix("https://inria.halpreprod.archives-ouvertes.fr/"), url-prefix("https://cv.hal.science"), url-prefix("https://cv-preprod.archives-ouvertes.fr/") {
    
 
 /* ======================================================================================================= */     
@@ -193,7 +193,15 @@ html, body{
 	background-color: var(--bg-color);
     color:var(--blanc);
 }
-    
+ 
+/* PARAGRAPHE FONT COLOR  =====================================*/    
+.paragraphes {
+	color: var(--blanc);
+}
+/* H1 Titre FONT COLOR  =====================================*/      
+.titre-h1 {
+	color: var(--blanc);
+}    
     
 /* LINK FONT COLOR  =====================================*/   
 a {
@@ -439,6 +447,31 @@ ul.dropdown-menu li:not(.not-white):hover, .dropdown-item:focus, .dropdown-item:
 }     
 
     
+/* POPUP AUTEUR IDHAL AFFILIATION */  
+    
+.popover-authors {
+	background-color: var(--bg-ban);
+} 
+  
+/* TXT COLOR DANS LE POPUP =====*/    
+.popover-body {
+	color: var(--blanc);
+}
+.popover-authors a.popover-affil {
+	color: var(--trg-color);
+} 
+.popover-authors .popover-author-header h4 {
+	color: var(--blanc);
+
+}
+    
+/* BTN DANS LE POPUP ==========*/    
+.popover-authors .hal-privilege-button {
+	background-color: var(--trg-color);
+}    
+.popover-authors .hal-privilege-button:hover {
+	background-color: var(--trg-hover);
+}    
 /* IMPUT BOXES  =====================================*/         
 form input.form-control {
 	background-color: var(--bg-ban);
@@ -782,10 +815,12 @@ tr.files:nth-child(1) > td:nth-child(2) > div:nth-child(1) > iframe:nth-child(1)
 	background-color: var(--bg-color);
 }
 
-
 section.flex-74 .authors .btn-popover, section.flex-74 .structures .btn-popover, #preview-doc .authors .btn-popover, #preview-doc .structures .btn-popover {
 	color: var(--blanc);
 }
+#preview-doc .authors .btn-popover:hover, #preview-doc .structures .btn-popover:hover, section.flex-74 .authors .btn-popover:hover, section.flex-74 .structures .btn-popover:hover {
+	color: var(--trg-color);
+}    
 .structures div:nth-child(2) span {
 	background-color: transparent;
 }
@@ -798,6 +833,15 @@ section.flex-74 .authors .btn-popover, section.flex-74 .structures .btn-popover,
 }
 .col-lg-4 .bg-beige a {
 	color: var(--blanc);
+} 
+/* PICTO CVHAL ======*/    
+    
+.col-lg-4 .bg-beige .detailed-resume {
+	border: 1px solid var(--trg-color);
+    padding: 5px 5px 0px 5px;
+} 
+.col-lg-4 .bg-beige .detailed-resume a {
+	color: var(--trg-color);
 }    
 /* Zone Citation ==================================*/       
 #citation {
@@ -1414,7 +1458,24 @@ div.authors .author-affiliations .searchStructure {
 .btn-primary-blue:hover {
 	background-color: var(--trg-hover);
 	color: var(--noir);
+}
+/* COLOR TEXTE MES INFORMATION =========*/  
+    
+#idext .value {
+	color: var(--blanc);
 }    
+#idext .field {
+	color: var(--blanc);
+}    
+
+/* COLOR TEXT MODIFIER MON MDP =========*/  
+.btn-secondary-blue {
+	color: var(--trg-color);
+}   
+.btn-secondary-blue:hover {
+	color: var(--trg-hover);
+}     
+    
 /* COLOR SEPARATOR LIGNE */    
 .table th, .table td {
 	border-top: 1px solid var(--bg-color);
@@ -1612,7 +1673,125 @@ input:focus-visible {
 /* LOGO DU CCSD ==================*/    
 #profil_ccsd > legend:nth-child(1) > img:nth-child(1), #profil_hal > legend:nth-child(1) > img:nth-child(1){
 	filter: brightness(0) invert(100%);
+}   
+    
+/* ================================ CV-HAL ================================ */       
+
+    
+/*TXT COLOR EXPLICATION =========*/   
+.explicatif-text {
+	color: var(--blanc);
 }    
+    
+/* COLOR TEXTE QUAND SWITCH OFF =======*/
+    
+.no-in-resume {
+	color: var(--blanc);
+}    
+
+/* TEXTE LINK AJOUTER UNE AUTRE LANGUE ====*/  
+    
+.go-back {
+	color: var(--trg-color);
+}    
+.go-back:hover {
+	color: var(--trg-hover);
+}    
+    
+/* SWITCHER =========================*/    
+.switch input:checked + .slider {
+	background-color: var(--trg-hover);
+}    
+.switch .slider::before {
+	background-color: var(--trg-color);
+}  
+    
+/* BADGES MES COMPETENCES ==============*/    
+ 
+.section-shadow.pg-20 .displayed .select2-selection__choice, .ticket {
+	background-color: var(--trg-color);
+}    
+.section-shadow.pg-20 .displayed .select2-selection__choice span, .ticket span {
+	color: var(--noir);
+}  
+    
+/* ZONE INPUT TEXTE */   
+    
+.section-shadow.pg-20 .displayed input {
+	border: 1px solid var(--trg-color);
+}    
+#skills-input, .section-shadow.pg-20 .displayed .select2-search {
+	background-color: var(--bg-ban);
+    color: var(--blanc);
+}
+    
+/* ZONE PRESENTATION */   
+
+/* BTN LANGUE ============*/    
+ul.nav-pills.light-border a.active {
+	background-color: var(--trg-color);
+	color: var(--noir);
+	border: 1px solid var(--trg-color);
+} 
+ul.nav-pills.light-border a {
+	border: 1px solid var(--trg-color);
+	color: var(--trg-color);
+}
+ul.nav-pills.light-border a:not(.active):hover {
+	background-color: var(--trg-hover);
+	border: 1px solid var(--trg-color);
+	color: var(--noir);
+}    
+/* ICON CRAYON =====*/    
+ 
+.wrapper-switch h3 button span {
+	color: var(--trg-color);
+} 
+    
+/* Onglet Mes Publi */    
+  
+#user-facettes #dragon-publi li, #user-facettes #dragon-widget li, #user-publications #dragon-publi li, #user-publications #dragon-widget li {
+	background-color: var(--bg-ban);
+}    
+#user-facettes .col-xl-4, #user-publications .col-xl-4 {
+	border: 0px solid transparent;
+}
+    
+/* Bandeau Requette ========*/   
+    
+#user-facettes #list-publi-resume table, #user-publications #list-publi-resume table {
+	border: 0px solid transparent;
+}    
+#user-facettes #list-publi-resume table thead tr, #user-publications #list-publi-resume table thead tr {
+	background-color: var(--bg-ban);
+} 
+    
+/* Zone Presentation du CVHAL */ 
+
+/* Barre de Recherche =====*/    
+.hal-second-search-input.search {
+	background-color: var(--bg-color);
+	border-bottom: 2px solid var(--trg-color);
+	color: var(--blanc);
+}
+    
+/* Txt Color du pourcentage */    
+
+.second-color {
+	color: var(--trg-color) !important;
+}    
+
+/* Btn Compétences ====*/    
+    
+#domain-resume-visualization .hal-bgtext {
+	background-color: var(--trg-color);
+	color: var(--noir);
+    transition:var(--transition);
+}
+#domain-resume-visualization .hal-bgtext:hover {
+	background-color: var(--trg-hover);
+	color: var(--blanc);
+}        
 }
 
 @-moz-document url-prefix("https://cas.ccsd.cnrs.fr/cas/login") {
