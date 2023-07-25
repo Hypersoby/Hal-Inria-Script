@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="ColorFull Logo" src="https://i.imgur.com/tuiFGlS.png">
+  <img alt="ColorFull Logo" src="https://raw.githubusercontent.com/Hypersoby/Hal-Inria-Scripts/master/Ressources/Logo%20Ombre.png">
   <br>
   
 <p align="center">
