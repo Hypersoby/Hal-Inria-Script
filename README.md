@@ -5,13 +5,13 @@
 <p align="center">
   Elegant, sober and more ergonomic: a new way to browse on HAL Inria.
    <br>
-   Seulement disponible pour le portail <a href="https://inria.hal.science/">HAL Inria</a> 
+   Only available for <a href="https://inria.hal.science/">HAL Inria portal</a> 
    <br>
-   Attention /!\ Le script ne sont pas compatibles avec les sites de collection, vous devrez alors les désactiver lors de la navigation.
+   Warning /!\ The script is not compatible with collection pages, so you will have to disable it when browsing.
    <br>
   <a href="https://github.com/Hypersoby/Hal-Inria-Scripts/wiki/Notes-de-patch">Patch Note</a>
   ·
-  <a href="mailto:christopher.lallemant@inrie.fr?subject=Mail from our Website">Contactez moi</a>
+  <a href="mailto:christopher.lallemant@inrie.fr?subject=Mail from our Website">Contact me</a>
   
   
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [![Generic badge](https://img.shields.io/badge/Version-1.0-<COLOR>.svg)](https://shields.io/) [![CSS](https://img.shields.io/badge/Language-CSS-red.svg)](https://shields.io/)
@@ -25,95 +25,92 @@
 Chrome ✔ | Firefox ✔ | Opera ✔ | Safari ✔ |  EDGE ✔ |
   
 # Sommaire
-  - [Comment faire](#Comment-faire-?)
-  - [Contenu](#Contenu) 
-  - [Personnalisation](#Personnalisation) 
-  - [Aperçu](#Aperçu)
-  - [Dépannage](#Dépannage)
-  - [Note de patch](#Note-de-patch)
-  - [Mise à jour](#Mise-à-jour) 
-  - [Contribution et Développement](#Contribution-et-Développement)
+  - [How to](#How-to)
+  - [Content](#Content) 
+  - [Customisation](#Customisation) 
+  - [Preview](#Preview)
+  - [Troubleshooting](#Troubleshooting)
+  - [Patch Note](#Patch-Note)
+  - [Update](#Update) 
+  - [Contribution and Development](#Contribution-et-Développement)
 
-
-# Comment faire ?
+# How to ?
 
 ## Installation 
-Installer [Stylus pour Firefox](https://addons.mozilla.org/fr/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) ou [Cascadea pour Safari](https://cascadea.app/).
+Install [Stylus pour Firefox](https://addons.mozilla.org/fr/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) or [Cascadea pour Safari](https://cascadea.app/).
   
-Si vous êtes sur le Navigateur Edge veuillez vous référer à la [Documentation de Microsoft](https://support.microsoft.com/fr-fr/microsoft-edge/ajouter-d%C3%A9sactiver-ou-supprimer-des-extensions-dans-microsoft-edge-9c0ec68c-2fbc-2f2c-9ff0-bdc76f46b026) pour pouvoir activer les extensions Chrome sur ce navigateur.
+If you are on Edge. Please refer to Microsoft documentation[Microsoft documentation](https://support.microsoft.com/fr-fr/microsoft-edge/ajouter-d%C3%A9sactiver-ou-supprimer-des-extensions-dans-microsoft-edge-9c0ec68c-2fbc-2f2c-9ff0-bdc76f46b026) to allow Chrome extensions into this browser. 
 
-Cependant aucun support n'est disponible pour le navigateur Internet Explorer dû à l'ancienneté du navigateur.
+However there's no support is available for the Internet Explorer due to its obsolescence.
 
-1. Cliquez sur le lien qui correspond à votre navigateur puis installer le script en cliquant sur le bouton`ajouter/installer`.
+1. Click on the link of what browser you're using, then install the script by clicking on the `add/install` button.
 
-2. Une icône représentant un `S` s'ajoutera en haut de votre navigateur dans la barre de navigation. 
+2. An `S` icon will be added at the top of your browser in the navigation bar.
 ![Firefox](https://i.imgur.com/28AipgL.png)
 
-3. *Si vous utilisez `Chrome` cliquez sur l'icône en forme de `puzzle` et épinglez ensuite `Stylus` dans votre barre de navigation.*
+3. *If you are using `Chrome` click on the `puzzle` icon and then pin `Stylus` to your navigation bar.*
 ![Chrome](https://i.imgur.com/a6PzHSY.png)
 
-4. Pour télécharger et installer le Script, il vous suffit de cliquer sur le liens `Script Umbrhal` ci-dessous puis de cliquer sur installer sur le panneau de gauche. /!\ Vous pourrez ensuite fermer l'onglet /!\
+4. To download and install the Script, click on the `Umbrhal Script` link below and then click on install on the left panel. /!\ You can close the tab afterward /!\ 
 
-## Lien de téléchargement 
-
-Le Thème Sombre `Umbrhal` : ![Script Umbrhal](https://github.com/Hypersoby/Hal-Inria-Scripts/raw/master/Umbrhal.user.css)
+## Download link
+`Umbrhal` Dark Theme : ![Script Umbrhal](https://github.com/Hypersoby/Hal-Inria-Scripts/raw/master/Umbrhal.user.css)
   
   
 
  
-Une fois l'installation complète, rendez-vous sur le site `Hal Inria` puis cliquez sur l'icône `S` de l'extension Stylus.
+Once the installation is complete, go to the `Hal Inria` website then click on the `S` icon of the Stylus extension.
 ![Hal](https://i.imgur.com/i9Bg4xo.jpg)
 <br>
-Cliquez sur la `case ☐` correspondant au(x) script(s) que vous souhaitez activer pour l'appliquer sur le site. 
+Click on the `checkbox ☐` corresponding to the script(s) you want to activate to enable it for the website.
+# Content
 
-# Contenu
-
-1. `Harmonisation` du site pour une navigation plus facile.
+1. `Harmonization` of the site for an easier navigation.
 ```
-- Thème Sombre. Sobre et reposant, basculez du côté obscur en un clic.
-- La palette de couleurs a été vérifier à l'aide de divers outils pour favoriser l'accessibilité.
-```
-
-2. `Style de couleur` pour varier les nuances.
-```
-- Ce script propose aussi un panneau complet pour personnaliser et créer votre propre thème
+- Dark Theme. Sober and relaxing, switch to the dark side in one click.
+- The color palette has been checked using various tools to promote accessibility.
 ```
 
-# Personnalisation  
+2. `Custom Color Style` to vary your own shades.
+```
+- This script also offers a complete panel to customize and create your own theme variant.
+```
+
+# Customisation 
   
-Pour personnaliser les couleurs de votre thème, rendez-vous sur le site `Hal Inria` puis cliquez sur l'icône `S` de l'extension Stylus.
+To customize the colors of your theme, go to the `Hal Inria` website then click on the `S` icon to show Stylus extension panel.
 <br>
-Cliquez sur `l'icône ⚙` pour ouvrir le panneau de personnalisation.  
+Click on the gear `⚙` icon to open the custimisation panel.
 ![Config](https://i.imgur.com/dDzOOxD.jpg)  
-Un panneau s'offre à vous avec plusieurs options de personnalisation. Vous pourrez ainsi cliquer sur la couleur que vous souhaitez modifier.
-Pour une meilleure personnalisation je vous propose cet Outil <a href="https://webaim.org/resources/contrastchecker/">Contrast Checker</a> pour vérifier la lisibilité vos couleurs
+A panel is available to you with several customization options. You can then click on the color you want to modify.
+For a better customization ride use <a href="https://webaim.org/resources/contrastchecker/">Contrast Checker</a> to check the readability between your colors.
 <br>  
 ![Panneau](https://i.imgur.com/LtyaVDn.png)
   
-## Note de patch
+## Patch Note
 
-Des notes sur les mises à jour seront ajoutées à chaque correctif. Voir ci-dessus.
+Changes will be added to each patchnotes. See above
 
-## Dépannage
+## Troubleshooting
 
-Parfois les scripts peuvent rencontrer un problème et vous disent qu'ils ne peuvent pas se `mettre à jour`.
-Ou bien qu'après mises à jour vous rencontrez des bugs visuels.
-La solution est toute bête, il vous suffit de supprimer le script et de le réinstaller à nouveau.
+Sometimes scripts may encounter a problem and tell you that they cannot `update`.
+Or after updates, you may encounter visual bugs.
+The solution is simple! Just delete the script and reinstall it again.
 
-## Mise à jour
+## Update
 
-Des `mises à jour` pourront être disponibles dans le futur en faisant `remonter les bugs` ou suite à `une demande de fonctionnalité`.
+`Updates` may be available in the future by `reporting bugs` or using `pull requests`.
 
-1. Pour voir si un script est à jour, rendez-vous dans l'extension Stylus en cliquant sur `S` puis sur `Gestion`
+1. To see if a script is up to date, go to the Stylus extension by clicking on `S` icon then on `Manage`
 
 ![S](https://i.imgur.com/lmYa50c.png)
 ![Gestion](https://i.imgur.com/TKGpDNo.png)
 
-2. Sur le panneau de droite qui contient les scripts, rendez-vous sur la ligne du script puis cliquez sur l'icône `⟲` pour vérifier si une mise à jour est possible. 
+2. On the right panel which contains the scripts, go to the script that you want to check then click on the `⟲` icon to check if an update is available.
 
 ![Update](https://i.imgur.com/RQi90O6.jpg)
 
-# Aperçu 
+# Preview
 
 <p align="center">
 <br>
@@ -124,8 +121,8 @@ Des `mises à jour` pourront être disponibles dans le futur en faisant `remonte
 ![Aperçu4](https://i.imgur.com/B957cS9.png)
 
 
-# Contribution et Développement
+# Contribution and Development
 
-Si vous voulez contribuer à améliorer et déceler des bugs ou me contacter, veuillez voir ci-dessus les éléments prévus à cet effet.
+If you want to contribute, improve abd report bugs you also contact me, link above is provided for this purpose.
 
-Créé par <a href="mailto:christopherlallemant@inria.fr?subject=Mail from our Website">Christopher Lallemant</a>.
+Created by <a href="mailto:christopherlallemant@inria.fr?subject=Mail from our Website">Christopher Lallemant</a>.
