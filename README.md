@@ -3,7 +3,7 @@
   <br>
   
 <p align="center">
-  Elégant, sobre et plus ergonomique : une nouvelle façons de navigation sur HAL Inria. 
+  Elegant, sober and more ergonomic: a new way to browse on HAL Inria.
    <br>
    Seulement disponible pour le portail <a href="https://inria.hal.science/">HAL Inria</a> 
    <br>
