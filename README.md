@@ -32,7 +32,7 @@ Chrome ✔ | Firefox ✔ | Opera ✔ | Safari ✔ |  EDGE ✔ |
   - [Troubleshooting](#Troubleshooting)
   - [Patch Note](#Patch-Note)
   - [Update](#Update) 
-  - [Contribution and Development](#Contribution-et-Développement)
+  - [Contribution and Development](#Contribution-and-Development)
 
 # How to ?
 
