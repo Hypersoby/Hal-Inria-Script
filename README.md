@@ -123,6 +123,6 @@ The solution is simple! Just delete the script and reinstall it again.
 
 # Contribution and Development
 
-If you want to contribute, improve abd report bugs you also contact me, link above is provided for this purpose.
+If you want to contribute, improve and/or report bugs you can contact me, the link above is provided for this purpose.
 
 Created by <a href="mailto:christopherlallemant@inria.fr?subject=Mail from our Website">Christopher Lallemant</a>.
