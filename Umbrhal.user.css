@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name        Umbrhal
 @namespace   HyperSoby
-@version     1.0.52
+@version     1.0.53
 @author      Lallemant Christopher
 @homepageURL 	https://github.com/Hypersoby/Hal-Inria-Scripts
 @updateURL   	https://github.com/Hypersoby/Hal-Inria-Scripts/raw/master/Umbrhal.user.css
@@ -459,7 +459,9 @@ ul.dropdown-menu li:not(.not-white):hover, .dropdown-item:focus, .dropdown-item:
 	border: 2px solid var(--trg-color);
 	background: var(--bg-widget);
 }   
-    
+.telechargement a {
+	color: var(--blanc);
+}   
 /* ============================================================================================================================================== */     
 /* ========================================================== PAGE CHVAL / SCRIPT CSS =========================================================== */        
 /* ============================================================================================================================================== */      
