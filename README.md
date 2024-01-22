@@ -37,7 +37,7 @@ Chrome ✔ | Firefox ✔ | Opera ✔ | Safari ✔ |  EDGE ✔ |
 # How to ?
 
 ## Installation 
-Install [Stylus pour Firefox](https://addons.mozilla.org/fr/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) or [Cascadea pour Safari](https://cascadea.app/).
+Install [Stylus for Firefox](https://addons.mozilla.org/fr/firefox/addon/styl-us/), [Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne), [Opera](https://addons.opera.com/en-gb/extensions/details/stylus/) or [Cascadea for Safari](https://cascadea.app/).
   
 If you are on Edge. Please refer to Microsoft documentation [Microsoft documentation](https://support.microsoft.com/fr-fr/microsoft-edge/ajouter-d%C3%A9sactiver-ou-supprimer-des-extensions-dans-microsoft-edge-9c0ec68c-2fbc-2f2c-9ff0-bdc76f46b026) to allow Chrome extensions into this browser. 
 
